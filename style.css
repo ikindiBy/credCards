@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#cards_manager {
+  margin: 0 auto;
+  width: 60%;
+  background-color: rgb(220, 238, 220);
+}
+
+#list_cards {
+  margin: 0 auto;
+  width: 80%;
+}
+.item_card {
+  width: 80%;
+  height: 100px;
+  border: 1px solid rgb(3, 70, 3);
+  background-color: rgb(182, 240, 182);
+  margin: 10px 0;
+}
+
+.item_card img {
+  max-height: 60px;
+}
