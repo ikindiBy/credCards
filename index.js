@@ -1,6 +1,13 @@
 const listCards = document.getElementById("list_cards");
 const buttonAddCard = document.getElementById("add_card");
 
+const srcImgCards = {
+  visa: "visa",
+  mastercard: "mastercard",
+  belcard: "belcard",
+  maestro: "maestro"
+};
+
 let counter = 0;
 
 const addCard = () => {
@@ -9,10 +16,15 @@ const addCard = () => {
   const textnode = document.createTextNode(`comment -- comment ${counter}`);
 
   const img = document.createElement("img");
-  if (counter % 2) {
-    img.src = "images/mastercard.png";
+  if (counter % 2 && counter % 3) {
+    img.src = `images/${srcImgCards.visa}.png`;
+  } else if (counter % 5) {
+    img.src = `images/${srcImgCards.mastercard}.png`;
+    // belcard
+  } else if (counter % 7) {
+    img.src = `images/${srcImgCards.belcard}.png`;
   } else {
-    img.src = "images/visa.png";
+    img.src = `images/${srcImgCards.maestro}.png`;
   }
 
   const button = document.createElement("button");
