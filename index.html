@@ -9,8 +9,26 @@
   </head>
   <body>
     <div id="cards_manager">
-      <button id="add_card">Add card</button>
+      <button id="create_card">Add card</button>
       <div id="list_cards"></div>
+    </div>
+    <div id="coverDisplay"></div>
+    <div id="modalForm">
+      <form>
+        <select name="typeCard" id="typeCard">
+          <option disabled selected>Chose type</option>
+          <option value="visa">Visa</option>
+          <option value="mastercard">MasterCard</option>
+          <option value="maestro">Maestro</option>
+          <option value="belcard">Belcard</option>
+        </select>
+        <div>
+          <label for="comment">Short description</label>
+          <input id="comment" type="text" />
+        </div>
+
+        <button id="add_card">Add new card</button>
+      </form>
     </div>
     <script src="./index.js"></script>
   </body>
